@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace TavernMaster
 {
-    public partial class Form1 : Form
+    public partial class ChangeAcc : Form
     {
-        public Form1()
+        public ChangeAcc()
         {
             InitializeComponent();
         }

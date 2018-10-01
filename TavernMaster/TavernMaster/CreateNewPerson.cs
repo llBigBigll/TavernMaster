@@ -50,8 +50,8 @@ namespace TavernMasterr
             int charism;
             int intel;
             int att;
-            Global.HairColor haircolor;
-            Global.Gender gender;
+            HairColor haircolor;
+            Gender gender;
 
             name = txtboxName.Text;
             surname = txtboxSurname.Text;

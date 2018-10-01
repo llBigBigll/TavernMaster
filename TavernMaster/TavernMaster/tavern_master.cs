@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace TavernMasterr
 {
-    public enum MasterCraft {Blacksmith, Alchemy, Warior, Archer,Farm, Merchant, None }
+    
 
     [Serializable]
     public class Tavern_master

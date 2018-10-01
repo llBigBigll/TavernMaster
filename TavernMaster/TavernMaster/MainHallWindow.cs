@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace TavernMasterr
 {
-    public partial class MainHall : Form
+    public partial class MainHallWindow : Form
     {
-        public MainHall()
+        public MainHallWindow()
         {
             InitializeComponent();
         }

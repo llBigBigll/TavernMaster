@@ -171,46 +171,46 @@ namespace TavernMasterr
 
         }
 
-        static public Global.Gender Convert_to_gender(string a)
+        static public Gender Convert_to_gender(string a)
         {
-            Global.Gender gender = Global.Gender.Male;
-            if (a == "Мужской") { gender = Global.Gender.Male; }
-            if (a == "Женский") { gender = Global.Gender.Female; }
+            Gender gender = Gender.Male;
+            if (a == "Мужской") { gender = Gender.Male; }
+            if (a == "Женский") { gender = Gender.Female; }
 
             return gender;
         }
-        static public Global.HairColor Convert_to_haircolor(string a)
+        static public HairColor Convert_to_haircolor(string a)
         {
 
-            Global.HairColor haircolor = Global.HairColor.Black;
+            HairColor haircolor = HairColor.Black;
            
             if (a == "Каштановые")
             {
-                haircolor = Global.HairColor.Brown;
+                haircolor = HairColor.Brown;
             }
             if (a == "Блондин")
             {
-                haircolor = Global.HairColor.Blond;
+                haircolor = HairColor.Blond;
             }
             if (a == "Рыжий")
             {
-                haircolor = Global.HairColor.Red;
+                haircolor = HairColor.Red;
             }
             if (a == "Брюнет")
             {
-                haircolor = Global.HairColor.Black;
+                haircolor = HairColor.Black;
             }
             if (a == "Фиолетовый")
             {
-                haircolor = Global.HairColor.Purple;
+                haircolor = HairColor.Purple;
             }
             if (a == "Зеленый")
             {
-                haircolor = Global.HairColor.Green;
+                haircolor = HairColor.Green;
             }
             if (a == "Розовый")
             {
-                haircolor = Global.HairColor.Pink;
+                haircolor = HairColor.Pink;
             }
 
             return haircolor;

@@ -58,11 +58,12 @@
     <Compile Include="Creating_tavern_master.Designer.cs">
       <DependentUpon>Creating_tavern_master.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form1.cs">
+    <Compile Include="ChangeMaster.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include=".Designer.cs">
+      <DependentUpon>ChangeMaster.cs</DependentUpon>
+      <SubType>Form</SubType>
     </Compile>
     <Compile Include="GetMercInfo.cs">
       <SubType>Form</SubType>
@@ -78,11 +79,11 @@
     </Compile>
     <Compile Include="Global.cs" />
     <Compile Include="Human.cs" />
-    <Compile Include="MainHall.cs">
+    <Compile Include="MainHallWindow.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="MainHall.Designer.cs">
-      <DependentUpon>MainHall.cs</DependentUpon>
+    <Compile Include="MainHallWindow.Designer.cs">
+      <DependentUpon>MainHallWindow.cs</DependentUpon>
     </Compile>
     <Compile Include="MainMenu.cs">
       <SubType>Form</SubType>
@@ -117,14 +118,20 @@
     <Compile Include="TheGame.Designer.cs">
       <DependentUpon>TheGame.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="ChangeMaster.resx">
+      <DependentUpon>ChangeMaster.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="CreateNewPerson.resx">
       <DependentUpon>CreateNewPerson.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Creating_tavern_master.resx">
       <DependentUpon>Creating_tavern_master.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="MainHall.resx">
-      <DependentUpon>MainHall.cs</DependentUpon>
+    <EmbeddedResource Include="GetMercInfo.resx">
+      <DependentUpon>GetMercInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainHallWindow.resx">
+      <DependentUpon>MainHallWindow.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MainMenu.resx">
       <DependentUpon>MainMenu.cs</DependentUpon>

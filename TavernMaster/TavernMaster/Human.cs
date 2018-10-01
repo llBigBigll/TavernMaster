@@ -32,10 +32,10 @@ namespace TavernMasterr
 
         int identification_code;//уникальный код человека
 
-        Global.Gender gender;//пол 
+        Gender gender;//пол 
         const int num_of_gender = 2;//количество возможных полов
 
-        Global.HairColor hair_color;//цвет волос
+        HairColor hair_color;//цвет волос
         const int num_of_hairs = 7;// количество возможных цветов волос
 
         int charisma;//уровень харизмы [0,100]
@@ -56,7 +56,7 @@ namespace TavernMasterr
             this.Age = age;
             this.identification_code = id;
         }
-        public Human(string name, string surname, int age, int Healthindexx, Global.Gender genderr, Global.HairColor hairColor, int charisma,
+        public Human(string name, string surname, int age, int Healthindexx, Gender genderr, HairColor hairColor, int charisma,
             int attractivenesss,int intelligencee)//Новый человек с всеми задаными параметрами
         {
             this.Name = name;
@@ -69,7 +69,7 @@ namespace TavernMasterr
             this.attractiveness = attractivenesss;
             this.intelligence = intelligencee;
             this.HealthIndex = Healthindexx;
-            if (this.gender == Global.Gender.Male)
+            if (this.gender == Gender.Male)
             {
                 if (!ListOfMaleNames.Contains(name))
                 {
@@ -101,8 +101,8 @@ namespace TavernMasterr
             this.SurName = ListOfSurNames[randomNum.Next(0, ListOfSurNames.Count)];
             this.Age = age;
             this.identification_code = counter;
-            this.gender = (Global.Gender)randomNum.Next(0, num_of_gender);
-            if (this.gender == Global.Gender.Male)
+            this.gender = (Gender)randomNum.Next(0, num_of_gender);
+            if (this.gender == Gender.Male)
             {
                 this.Name = ListOfMaleNames[randomNum.Next(0, ListOfMaleNames.Count)];
             }
@@ -110,7 +110,7 @@ namespace TavernMasterr
             {
                 this.Name = ListOfFemaleNames[randomNum.Next(0, ListOfFemaleNames.Count)];
             }
-            this.hair_color = (Global.HairColor)randomNum.Next(0, num_of_hairs);
+            this.hair_color = (HairColor)randomNum.Next(0, num_of_hairs);
             this.charisma = randomNum.Next(0, 100);
             this.attractiveness = randomNum.Next(0, 100);
             this.intelligence = randomNum.Next(0, 100);
@@ -124,8 +124,8 @@ namespace TavernMasterr
             this.SurName = ListOfSurNames[randomNum.Next(0, ListOfSurNames.Count)];
             this.Age = 18 + randomNum.Next(0, 25);
             this.identification_code = counter;
-            this.gender = (Global.Gender)randomNum.Next(0, num_of_gender);
-            if (this.gender == Global.Gender.Male)
+            this.gender = (Gender)randomNum.Next(0, num_of_gender);
+            if (this.gender == Gender.Male)
             {
                 this.Name = ListOfMaleNames[randomNum.Next(0, ListOfMaleNames.Count)];
             }
@@ -134,7 +134,7 @@ namespace TavernMasterr
                 this.Name = ListOfFemaleNames[randomNum.Next(0, ListOfFemaleNames.Count)];
             }
             this.HealthIndex = randomNum.Next(0, 101);
-            this.hair_color = (Global.HairColor)randomNum.Next(0, num_of_hairs);
+            this.hair_color = (HairColor)randomNum.Next(0, num_of_hairs);
             this.charisma = randomNum.Next(0, 101);
             this.attractiveness = randomNum.Next(0, 101);
             this.intelligence = randomNum.Next(0, 101);
