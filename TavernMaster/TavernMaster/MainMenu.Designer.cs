@@ -31,9 +31,9 @@
             this.btnExit = new System.Windows.Forms.Button();
             this.btnCreatePeople = new System.Windows.Forms.Button();
             this.btnShowPop = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
+            this.BtnChangeMaster = new System.Windows.Forms.Button();
+            this.btnStartGame = new System.Windows.Forms.Button();
+            this.btnRules = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnExit
@@ -77,37 +77,38 @@
             this.btnShowPop.UseVisualStyleBackColor = true;
             this.btnShowPop.Click += new System.EventHandler(this.btnShowPop_Click);
             // 
-            // button1
+            // BtnChangeMaster
             // 
-            this.button1.BackColor = System.Drawing.Color.Transparent;
-            this.button1.Font = new System.Drawing.Font("Monotype Corsiva", 12F, System.Drawing.FontStyle.Italic);
-            this.button1.Location = new System.Drawing.Point(221, 244);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(114, 65);
-            this.button1.TabIndex = 1;
-            this.button1.Text = "Выбрать игровой профиль";
-            this.button1.UseVisualStyleBackColor = false;
+            this.BtnChangeMaster.BackColor = System.Drawing.Color.Transparent;
+            this.BtnChangeMaster.Font = new System.Drawing.Font("Monotype Corsiva", 12F, System.Drawing.FontStyle.Italic);
+            this.BtnChangeMaster.Location = new System.Drawing.Point(221, 244);
+            this.BtnChangeMaster.Name = "BtnChangeMaster";
+            this.BtnChangeMaster.Size = new System.Drawing.Size(114, 65);
+            this.BtnChangeMaster.TabIndex = 1;
+            this.BtnChangeMaster.Text = "Выбрать игровой профиль";
+            this.BtnChangeMaster.UseVisualStyleBackColor = false;
             // 
-            // button2
+            // btnStartGame
             // 
-            this.button2.Font = new System.Drawing.Font("Monotype Corsiva", 12F, System.Drawing.FontStyle.Italic);
-            this.button2.Location = new System.Drawing.Point(190, 12);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(172, 65);
-            this.button2.TabIndex = 0;
-            this.button2.Text = "Играть";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.btnStartGame.Font = new System.Drawing.Font("Monotype Corsiva", 12F, System.Drawing.FontStyle.Italic);
+            this.btnStartGame.Location = new System.Drawing.Point(190, 12);
+            this.btnStartGame.Name = "btnStartGame";
+            this.btnStartGame.Size = new System.Drawing.Size(172, 65);
+            this.btnStartGame.TabIndex = 0;
+            this.btnStartGame.Text = "Играть";
+            this.btnStartGame.UseVisualStyleBackColor = true;
+            this.btnStartGame.Click += new System.EventHandler(this.button2_Click);
             // 
-            // button3
+            // btnRules
             // 
-            this.button3.Font = new System.Drawing.Font("Monotype Corsiva", 12F, System.Drawing.FontStyle.Italic);
-            this.button3.Location = new System.Drawing.Point(405, 244);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(114, 65);
-            this.button3.TabIndex = 2;
-            this.button3.Text = "Правила";
-            this.button3.UseVisualStyleBackColor = true;
+            this.btnRules.Font = new System.Drawing.Font("Monotype Corsiva", 12F, System.Drawing.FontStyle.Italic);
+            this.btnRules.Location = new System.Drawing.Point(405, 244);
+            this.btnRules.Name = "btnRules";
+            this.btnRules.Size = new System.Drawing.Size(114, 65);
+            this.btnRules.TabIndex = 2;
+            this.btnRules.Text = "Правила";
+            this.btnRules.UseVisualStyleBackColor = true;
+            this.btnRules.Click += new System.EventHandler(this.button3_Click);
             // 
             // MainWindow
             // 
@@ -115,9 +116,9 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::TavernMaster.Properties.Resources.imeg;
             this.ClientSize = new System.Drawing.Size(531, 405);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnRules);
+            this.Controls.Add(this.btnStartGame);
+            this.Controls.Add(this.BtnChangeMaster);
             this.Controls.Add(this.btnShowPop);
             this.Controls.Add(this.btnCreatePeople);
             this.Controls.Add(this.btnExit);
@@ -135,9 +136,9 @@
         private System.Windows.Forms.Button btnExit;
         private System.Windows.Forms.Button btnCreatePeople;
         private System.Windows.Forms.Button btnShowPop;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button BtnChangeMaster;
+        private System.Windows.Forms.Button btnStartGame;
+        private System.Windows.Forms.Button btnRules;
     }
 }
 

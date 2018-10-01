@@ -8,7 +8,11 @@ namespace TavernMasterr
 {
     public static class Global
     {
-        //public static Tuple<>
+        public static string Rules = "Правила:\n" +
+            "Каждый игрок обязан любить разработчика!\n" +
+            "Инцест запрещен\n" +
+            "...." +
+            "";
         public enum Gender { Male, Female }
         public enum HairColor { Brown, Blond, Red, Black, Purple, Green, Pink }
         public static List<Human> Population = new List<Human>();

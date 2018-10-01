@@ -50,5 +50,11 @@ namespace TavernMasterr
             TheGame game = new TheGame();
             game.Show();
         }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            ShowRules rules = new ShowRules();
+            rules.Show();
+        }
     }
 }

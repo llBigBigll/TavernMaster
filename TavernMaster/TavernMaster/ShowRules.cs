@@ -15,6 +15,12 @@ namespace TavernMasterr
         public ShowRules()
         {
             InitializeComponent();
+            this.textboxRules.Text = Global.Rules;
+        }
+
+        private void btnExit_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

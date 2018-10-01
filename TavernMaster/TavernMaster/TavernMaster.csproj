@@ -145,6 +145,9 @@
     <EmbeddedResource Include="ShowingPopulation.resx">
       <DependentUpon>ShowingPopulation.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ShowRules.resx">
+      <DependentUpon>ShowRules.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="TheGame.resx">
       <DependentUpon>TheGame.cs</DependentUpon>
     </EmbeddedResource>
