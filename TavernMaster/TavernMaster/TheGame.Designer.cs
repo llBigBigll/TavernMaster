@@ -1,4 +1,4 @@
-﻿namespace My_first_window_app
+﻿namespace TavernMasterr
 {
     partial class TheGame
     {
@@ -165,7 +165,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = global::My_first_window_app.Properties.Resources.imeg;
+            this.BackgroundImage = global::TavernMaster.Properties.Resources.imeg;
             this.ClientSize = new System.Drawing.Size(1004, 570);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.btnGiveOrder);

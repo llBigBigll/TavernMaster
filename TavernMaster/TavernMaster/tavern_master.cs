@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace My_first_window_app
+namespace TavernMasterr
 {
     public enum MasterCraft {Blacksmith, Alchemy, Warior, Archer,Farm, Merchant, None }
 

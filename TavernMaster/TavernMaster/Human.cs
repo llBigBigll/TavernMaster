@@ -6,7 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace My_first_window_app
+namespace TavernMasterr
 {
 
     //7 элементов

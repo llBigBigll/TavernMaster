@@ -21,7 +21,7 @@ using System.Windows.Forms;
 
      
 
-namespace My_first_window_app
+namespace TavernMasterr
 {
     static class Program
     {
