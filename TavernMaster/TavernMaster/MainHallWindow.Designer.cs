@@ -63,6 +63,7 @@
             this.numTables.Name = "numTables";
             this.numTables.Size = new System.Drawing.Size(120, 31);
             this.numTables.TabIndex = 1;
+            this.numTables.ValueChanged += new System.EventHandler(this.ValueChanged);
             // 
             // numChairs
             // 
@@ -71,6 +72,7 @@
             this.numChairs.Name = "numChairs";
             this.numChairs.Size = new System.Drawing.Size(120, 31);
             this.numChairs.TabIndex = 2;
+            this.numChairs.ValueChanged += new System.EventHandler(this.ValueChanged);
             // 
             // labelTablesNum
             // 

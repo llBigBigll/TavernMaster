@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace TavernMaster
 {
-    class MainHall
+    [Serializable]
+    public class MainHall
     {
         /*Вместимость :
          * ур1 - 5 стол 20 стул
@@ -34,7 +35,7 @@ namespace TavernMaster
         int NumChair;
         
         int Grade;//(1-3)
-
+        
         public MainHall( Size sz, int grade )
         {
             if (sz == Size.Small)
@@ -61,6 +62,33 @@ namespace TavernMaster
             this.Grade = grade;
             NumChair = 0;
             NumTable = 0;
+        }
+
+        public int GetGrade()
+
+        {
+            return this.Grade;
+
+        }
+
+        public int GetChairsCapacity()
+        {
+            return this.CapasityChair;
+        }
+
+        public int GetTableCapacity()
+        {
+            return this.CapacityTable;
+        }
+
+        public int CountChairs()
+        {
+            return this.NumChair;
+        }
+
+        public int CountTables()
+        {
+            return this.NumTable;
         }
 
         public int GetUpdateCost()

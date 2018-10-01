@@ -21,13 +21,14 @@ namespace TavernMaster
 
         private void btnToMainMenu_Click(object sender, EventArgs e)
         {
-            this.Close();
+            this.Dispose();
+
         }
 
         private void btnMainHall_Click(object sender, EventArgs e)
         {
             MainHallWindow mainhall= new MainHallWindow();
-            mainhall.Show();
+            mainhall.ShowDialog();
         }
     }
 }

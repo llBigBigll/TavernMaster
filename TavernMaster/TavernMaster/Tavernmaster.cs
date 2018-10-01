@@ -30,18 +30,20 @@ namespace TavernMaster
         int Fund;
         int Level;
         string Name;
-        Tavern TheTavern;
+        public Tavern TheTavern;
         MasterCraft craft;
         double Cur_exp;
 
         public Tavern_master()
         {
-            this.Fund = 0;
+            this.Fund = 21;
             this.Level = 0;
             this.Name = null;
             this.TheTavern = new Tavern();
             this.Cur_exp = 0;
         }
+
+        
 
         private void Appdate_lvl()
         {
@@ -53,6 +55,7 @@ namespace TavernMaster
                 exp_needed = 1000 * Math.Pow(1.2, this.Level - 1);
             }
         }
+
 
         public void Set_craft(MasterCraft masterCraft)
         {

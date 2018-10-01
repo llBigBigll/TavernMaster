@@ -13,6 +13,7 @@ namespace TavernMaster
     public partial class MainWindow : Form
     {   
         public List<Human> population;
+        
 
         public MainWindow()
         {
@@ -49,12 +50,15 @@ namespace TavernMaster
         {
             TheGame game = new TheGame();
             game.Show();
+            
+
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
             ShowRules rules = new ShowRules();
-            rules.Show();
+            
+            rules.ShowDialog();
         }
     }
 }

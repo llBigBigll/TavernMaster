@@ -6,9 +6,10 @@ using System.Threading.Tasks;
 
 namespace TavernMaster
 {
-    class Tavern
+    [Serializable]
+    public class Tavern
     {
-        MainHall Mainhall;
+        public MainHall Mainhall;
         string Name;
         Size TheSize;
 
