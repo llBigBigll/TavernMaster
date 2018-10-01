@@ -8,7 +8,11 @@ namespace TavernMaster
 {
     class MainHall
     {
-        /*Стоимость стула покупа/прожа:
+        /*Вместимость :
+         * ур1 - 5 стол 20 стул
+         * ур2 - 15 стол 30 стул
+         * ур3 - 40  стол 160 стул
+         * Стоимость стула покупа/прожа:
          *ур1 -1/0
          *ур2 - 2/1 
          *ур3 - 5/2
@@ -44,14 +48,14 @@ namespace TavernMaster
             {
                 this.TheSize = sz;
                 this.CapacityTable = 15;
-                this.CapasityChair = 30;
+                this.CapasityChair = 60;
                 //this.Cost = 1000;
 
             }else if (sz == Size.Large)
             {
                 this.TheSize = sz;
                 this.CapacityTable = 40;
-                this.CapasityChair = 80;
+                this.CapasityChair = 160;
                 //this.Cost = 11000;
             }
             this.Grade = grade;
