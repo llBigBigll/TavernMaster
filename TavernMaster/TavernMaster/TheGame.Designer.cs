@@ -51,6 +51,7 @@
             this.btnMainHall.TabIndex = 0;
             this.btnMainHall.Text = "Главный Зал";
             this.btnMainHall.UseVisualStyleBackColor = true;
+            this.btnMainHall.Click += new System.EventHandler(this.btnMainHall_Click);
             // 
             // txtNameOfTavern
             // 

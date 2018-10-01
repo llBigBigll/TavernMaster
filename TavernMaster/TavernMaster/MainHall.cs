@@ -72,7 +72,8 @@ namespace TavernMaster
         public int GetCost()
         {
           
-            return this.NumTable*Global.TableSellPrice[Grade-1]+this.NumChair*Global.ChairSellPrice[Grade-1]+Global.MainHallSellPrice[(int)TheSize] ;
+            return this.NumTable*Global.TableSellPrice[Grade-1]+this.NumChair*Global.ChairSellPrice[Grade-1]+
+                Global.MainHallSellPrice[(int)TheSize] ;
 
         }
 

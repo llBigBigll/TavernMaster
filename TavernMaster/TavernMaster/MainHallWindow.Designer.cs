@@ -34,9 +34,11 @@
             this.labelTablesNum = new System.Windows.Forms.Label();
             this.labelChairsNum = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
-            this.label2 = new System.Windows.Forms.Label();
+            this.txtSumm = new System.Windows.Forms.Label();
             this.labelMaxTable = new System.Windows.Forms.Label();
             this.labelMaxChairs = new System.Windows.Forms.Label();
+            this.MaxTable = new System.Windows.Forms.Label();
+            this.MaxChairs = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.numTables)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numChairs)).BeginInit();
             this.SuspendLayout();
@@ -107,18 +109,17 @@
             this.button1.Text = "Купить/Продать";
             this.button1.UseVisualStyleBackColor = false;
             // 
-            // label2
+            // txtSumm
             // 
-            this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.Font = new System.Drawing.Font("Monotype Corsiva", 15.75F, System.Drawing.FontStyle.Italic);
-            this.label2.ForeColor = System.Drawing.Color.Goldenrod;
-            this.label2.Location = new System.Drawing.Point(12, 320);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(56, 25);
-            this.label2.TabIndex = 6;
-            this.label2.Text = "label2";
-            this.label2.Click += new System.EventHandler(this.label2_Click);
+            this.txtSumm.AutoSize = true;
+            this.txtSumm.BackColor = System.Drawing.Color.Transparent;
+            this.txtSumm.Font = new System.Drawing.Font("Monotype Corsiva", 15.75F, System.Drawing.FontStyle.Italic);
+            this.txtSumm.ForeColor = System.Drawing.Color.Goldenrod;
+            this.txtSumm.Location = new System.Drawing.Point(12, 320);
+            this.txtSumm.Name = "txtSumm";
+            this.txtSumm.Size = new System.Drawing.Size(56, 25);
+            this.txtSumm.TabIndex = 6;
+            this.txtSumm.Text = "label2";
             // 
             // labelMaxTable
             // 
@@ -144,15 +145,41 @@
             this.labelMaxChairs.TabIndex = 8;
             this.labelMaxChairs.Text = "Максимум:";
             // 
+            // MaxTable
+            // 
+            this.MaxTable.AutoSize = true;
+            this.MaxTable.BackColor = System.Drawing.Color.Transparent;
+            this.MaxTable.Font = new System.Drawing.Font("Monotype Corsiva", 15.75F, System.Drawing.FontStyle.Italic);
+            this.MaxTable.ForeColor = System.Drawing.Color.Red;
+            this.MaxTable.Location = new System.Drawing.Point(241, 182);
+            this.MaxTable.Name = "MaxTable";
+            this.MaxTable.Size = new System.Drawing.Size(56, 25);
+            this.MaxTable.TabIndex = 9;
+            this.MaxTable.Text = "label3";
+            // 
+            // MaxChairs
+            // 
+            this.MaxChairs.AutoSize = true;
+            this.MaxChairs.BackColor = System.Drawing.Color.Transparent;
+            this.MaxChairs.Font = new System.Drawing.Font("Monotype Corsiva", 15.75F, System.Drawing.FontStyle.Italic);
+            this.MaxChairs.ForeColor = System.Drawing.Color.Red;
+            this.MaxChairs.Location = new System.Drawing.Point(241, 267);
+            this.MaxChairs.Name = "MaxChairs";
+            this.MaxChairs.Size = new System.Drawing.Size(56, 25);
+            this.MaxChairs.TabIndex = 10;
+            this.MaxChairs.Text = "label4";
+            // 
             // MainHallWindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::TavernMaster.Properties.Resources.imeg;
             this.ClientSize = new System.Drawing.Size(1004, 570);
+            this.Controls.Add(this.MaxChairs);
+            this.Controls.Add(this.MaxTable);
             this.Controls.Add(this.labelMaxChairs);
             this.Controls.Add(this.labelMaxTable);
-            this.Controls.Add(this.label2);
+            this.Controls.Add(this.txtSumm);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.labelChairsNum);
             this.Controls.Add(this.labelTablesNum);
@@ -178,8 +205,10 @@
         private System.Windows.Forms.Label labelTablesNum;
         private System.Windows.Forms.Label labelChairsNum;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label txtSumm;
         private System.Windows.Forms.Label labelMaxTable;
         private System.Windows.Forms.Label labelMaxChairs;
+        private System.Windows.Forms.Label MaxTable;
+        private System.Windows.Forms.Label MaxChairs;
     }
 }

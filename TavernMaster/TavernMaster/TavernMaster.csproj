@@ -112,7 +112,8 @@
     <Compile Include="ShowRules.Designer.cs">
       <DependentUpon>ShowRules.cs</DependentUpon>
     </Compile>
-    <Compile Include="tavern_master.cs" />
+    <Compile Include="Tavern.cs" />
+    <Compile Include="Tavernmaster.cs" />
     <Compile Include="TheGame.cs">
       <SubType>Form</SubType>
     </Compile>

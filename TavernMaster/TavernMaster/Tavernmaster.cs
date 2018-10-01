@@ -30,7 +30,7 @@ namespace TavernMaster
         int Fund;
         int Level;
         string Name;
-        string TavernName;
+        Tavern TheTavern;
         MasterCraft craft;
         double Cur_exp;
 
@@ -39,7 +39,7 @@ namespace TavernMaster
             this.Fund = 0;
             this.Level = 0;
             this.Name = null;
-            this.TavernName = null;
+            this.TheTavern = new Tavern();
             this.Cur_exp = 0;
         }
 
@@ -73,7 +73,7 @@ namespace TavernMaster
 
         public string Get_TavernName()
         {
-            return this.TavernName;
+            return this.TheTavern.GetName();
         }
 
         public string Get_Name()
@@ -88,7 +88,7 @@ namespace TavernMaster
 
         public void Set_TavernName(string tavernname)
         {
-            this.TavernName = tavernname;
+            this.TheTavern.SetName(tavernname);
         }
 
         public void Give_exp(int exp_earned)

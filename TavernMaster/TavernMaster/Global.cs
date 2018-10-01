@@ -19,14 +19,12 @@ namespace TavernMaster
             "...." +
             "";
 
-        public static int[] ChairBuyPrice = { 1, 2, 5 };
-        public static int[] ChairSellPrice = { 0, 1, 2 };
-
-        public static int[] TableBuyPrice = { 5, 11, 20 };
-        public static int[] TableSellPrice = { 2, 4, 9 };
-
-        public static int[] MainHallSellPrice = { 0, 1000, 11000 };
-        public static int[] MainHallUpgradePrice = { 0, 2000, 18000 };
+        public static int[] ChairBuyPrice = {1,2,5 };
+        public static int[] ChairSellPrice = {0,1,2 };
+        public static int[] TableBuyPrice = {5,11,20 };
+        public static int[] TableSellPrice = {2,4,9 };
+        public static int[] MainHallUpgradePrice = {100,4000,20000 };
+        public static int[] MainHallSellPrice = {0,1000,11000 };
 
         public static List<Human> Population = new List<Human>();
         public static List<Tavern_master> Masters= new List<Tavern_master>();
@@ -37,9 +35,6 @@ namespace TavernMaster
         public static string file_of_names = @"\" + "names.dat";
         public static string file_of_population = @"\" + cur_player_name + "pulation.dat";
         public static string file_of_counter = @"\" + cur_player_name + "counter.dat";
-
-        
-
 
         public static void Appdate_data()
         {

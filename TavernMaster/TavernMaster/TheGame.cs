@@ -23,5 +23,11 @@ namespace TavernMaster
         {
             this.Close();
         }
+
+        private void btnMainHall_Click(object sender, EventArgs e)
+        {
+            MainHallWindow mainhall= new MainHallWindow();
+            mainhall.Show();
+        }
     }
 }
