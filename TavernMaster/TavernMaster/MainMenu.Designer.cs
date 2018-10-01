@@ -87,6 +87,7 @@
             this.BtnChangeMaster.TabIndex = 1;
             this.BtnChangeMaster.Text = "Выбрать игровой профиль";
             this.BtnChangeMaster.UseVisualStyleBackColor = false;
+            this.BtnChangeMaster.Click += new System.EventHandler(this.BtnChangeMaster_Click);
             // 
             // btnStartGame
             // 

@@ -74,6 +74,11 @@ namespace TavernMaster
             
         }
 
+        public int GetLvl()
+        {
+            return this.Level;
+        }
+
         public string Get_TavernName()
         {
             return this.TheTavern.GetName();
@@ -132,6 +137,28 @@ namespace TavernMaster
             }
         }
 
-        
+        bool IsEqual(Tavern_master human) { return Int32.Equals(Name, human.Name); }
+        public override bool Equals(object obj)
+        {
+            if (Object.ReferenceEquals(null, obj)) { return false; }
+            if (Object.ReferenceEquals(this, obj)) { return true; }
+            if (obj.GetType() != this.GetType()) { return false; }
+            return IsEqual((Tavern_master)obj);
+        }
+        public bool Equals(Tavern_master human)
+        {
+            if (Object.ReferenceEquals(null, human)) { return false; }
+            if (Object.ReferenceEquals(this, human)) { return true; }
+
+            return IsEqual(human);
+        }
+        public static bool operator !=(Tavern_master a, Tavern_master b)
+        {
+            return a.Name != b.Name;
+        }
+        public static bool operator ==(Tavern_master a, Tavern_master b)
+        {
+            return a.Name == b.Name;
+        }
     }
 }

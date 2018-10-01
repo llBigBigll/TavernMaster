@@ -49,7 +49,7 @@ namespace TavernMaster
         private void button2_Click(object sender, EventArgs e)
         {
             TheGame game = new TheGame();
-            game.Show();
+            game.ShowDialog();
             
 
         }
@@ -59,6 +59,12 @@ namespace TavernMaster
             ShowRules rules = new ShowRules();
             
             rules.ShowDialog();
+        }
+
+        private void BtnChangeMaster_Click(object sender, EventArgs e)
+        {
+            ChangeAcc acc = new ChangeAcc();
+            acc.Show();
         }
     }
 }

@@ -20,7 +20,7 @@ namespace TavernMaster
         }
         public Creating_tavern_master(bool is_new_game)
         {
-            Is_new_game = is_new_game;
+            this.Is_new_game = is_new_game;
 
 
             #region Первое приветствие
@@ -154,12 +154,23 @@ namespace TavernMaster
             if (name != "" && name != null && tavernname != "" && tavernname != null)
             {
                 
-                Global.Masters.Add(master);
-                Global.Appdate_cur_master(master);
-                MessageBox.Show("Поздравляю создан новый игровой профиль","Оповещение",MessageBoxButtons.OK,MessageBoxIcon.Information);
-                Tuple<Tavern_master, List<Tavern_master>> tuple = new Tuple<Tavern_master, List<Tavern_master>>(master,Global.Masters);
-                Program.Write_masters(tuple, Global.file_players_list);
-                this.Close();
+                
+                if (Is_new_game)
+                {
+                    Global.Appdate_cur_master(master);
+                    Global.AddMaster(master);
+                    MessageBox.Show("Поздравляю создан новый игровой профиль", "Оповещение", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    Tuple<Tavern_master, List<Tavern_master>> tuple = new Tuple<Tavern_master, List<Tavern_master>>(master, Global.Masters);
+                    Program.Write_masters(tuple, Global.file_players_list);
+                    this.Close();
+                }
+                else {
+                    Global.AddMaster(master);
+                    MessageBox.Show("Поздравляю создан новый игровой профиль", "Оповещение", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    Tuple<Tavern_master, List<Tavern_master>> tuple = new Tuple<Tavern_master, List<Tavern_master>>(master, Global.Masters);
+                    Program.Write_masters(tuple, Global.file_players_list);
+                    this.Close();
+                }
             }
 
         }

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace TavernMaster
 {
@@ -36,8 +37,15 @@ namespace TavernMaster
         public static string file_of_population = @"\" + cur_player_name + "pulation.dat";
         public static string file_of_counter = @"\" + cur_player_name + "counter.dat";
 
+        public static void AddMaster(Tavern_master master)
+        {
+            
+            Masters.Add(master);
+        }
+
         public static void Appdate_data()
         {
+            
             cur_player_name = cur_master.Get_Name();
             file_of_population = @"\" + cur_player_name + "pulation.dat";
             file_of_counter = @"\" + cur_player_name + "counter.dat";

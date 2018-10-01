@@ -17,7 +17,7 @@ namespace TavernMaster
     [Serializable]
     public class Human
     {
-        bool IsEqual(Human human) { return Int32.Equals(identification_code, human.identification_code); }
+        
 
         public static int counter = 0;//Счетчик людей глобальный
         public static List<string> ListOfMaleNames = new List<string>() { "Иван" };//список мужских Имен для случайного подбора 
@@ -186,6 +186,8 @@ namespace TavernMaster
             this.Age += years;
 
         }
+
+        bool IsEqual(Human human) { return Int32.Equals(identification_code, human.identification_code); }
         public override bool Equals(object obj)
         {
             if (Object.ReferenceEquals(null, obj)) { return false; }
