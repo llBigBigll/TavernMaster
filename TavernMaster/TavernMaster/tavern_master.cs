@@ -26,6 +26,8 @@ namespace TavernMasterr
          * ...
          * ...
          */
+
+        int Fund;
         int Level;
         string Name;
         string TavernName;
@@ -80,11 +82,42 @@ namespace TavernMasterr
         }
         public Tavern_master()
         {
+            this.Fund = 0;
             this.Level = 0;
             this.Name = null;
             this.TavernName = null;
             this.Cur_exp = 0;
         }
+        public int Get_Fund()
+        {
+            return this.Fund;
+        }
+        public void Add_Cash( int summ)
+        {
+            this.Fund += summ;
+        }
 
+        /// <summary>
+        /// Get money from Fund 
+        /// </summary>
+        /// <param summofmoney="summ"></param>
+        /// <returns>
+        /// alter money if there are such summ and return true 
+        /// or return false
+        /// </returns>
+        public bool WithDrawMoney(int summ)
+        {
+            if (this.Fund >= summ)
+            {
+                this.Fund -= summ;
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+
+        
     }
 }
