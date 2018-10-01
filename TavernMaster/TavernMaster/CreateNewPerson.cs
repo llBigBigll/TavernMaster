@@ -11,7 +11,7 @@ using System.Runtime.Serialization.Formatters.Binary;
 using System.Text.RegularExpressions;
 using System.Windows.Forms;
 
-namespace TavernMasterr
+namespace TavernMaster
 {
 
     public partial class fCreateNewOne : Form

@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace TavernMasterr
+namespace TavernMaster
 {
     
 
@@ -34,6 +34,15 @@ namespace TavernMasterr
         MasterCraft craft;
         double Cur_exp;
 
+        public Tavern_master()
+        {
+            this.Fund = 0;
+            this.Level = 0;
+            this.Name = null;
+            this.TavernName = null;
+            this.Cur_exp = 0;
+        }
+
         private void Appdate_lvl()
         {
             double exp_needed = 1000*Math.Pow(1.2,this.Level-1);
@@ -44,10 +53,12 @@ namespace TavernMasterr
                 exp_needed = 1000 * Math.Pow(1.2, this.Level - 1);
             }
         }
+
         public void Set_craft(MasterCraft masterCraft)
         {
             this.craft = masterCraft;
         }
+
         public void Set_craft(string mastercraft)
         {
             this.craft = MasterCraft.None;
@@ -59,35 +70,35 @@ namespace TavernMasterr
             if (mastercraft == "Merchant") { this.craft = MasterCraft.Merchant; }
             
         }
+
         public string Get_TavernName()
         {
             return this.TavernName;
         }
+
         public string Get_Name()
         {
             return this.Name;
         }
+
         public void Set_Name(string name)
         {
             this.Name = name;
         }
+
         public void Set_TavernName(string tavernname)
         {
             this.TavernName = tavernname;
         }
+
         public void Give_exp(int exp_earned)
         {
             this.Cur_exp += exp_earned;
             Appdate_lvl();
         }
-        public Tavern_master()
-        {
-            this.Fund = 0;
-            this.Level = 0;
-            this.Name = null;
-            this.TavernName = null;
-            this.Cur_exp = 0;
-        }
+        
+
+
         public int Get_Fund()
         {
             return this.Fund;

@@ -21,7 +21,7 @@ using System.Windows.Forms;
 
      
 
-namespace TavernMasterr
+namespace TavernMaster
 {
     static class Program
     {

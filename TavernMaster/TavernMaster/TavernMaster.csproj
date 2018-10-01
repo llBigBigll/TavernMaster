@@ -79,6 +79,7 @@
     </Compile>
     <Compile Include="Global.cs" />
     <Compile Include="Human.cs" />
+    <Compile Include="MainHall.cs" />
     <Compile Include="MainHallWindow.cs">
       <SubType>Form</SubType>
     </Compile>

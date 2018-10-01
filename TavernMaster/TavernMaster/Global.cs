@@ -4,8 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace TavernMasterr
+namespace TavernMaster
 {
+    public enum Size {Small, Medium, Large }
     public enum MasterCraft { Blacksmith, Alchemy, Warior, Archer, Farm, Merchant, None }
     public enum Gender { Male, Female }
     public enum HairColor { Brown, Blond, Red, Black, Purple, Green, Pink }
@@ -18,7 +19,15 @@ namespace TavernMasterr
             "...." +
             "";
 
-        
+        public static int[] ChairBuyPrice = { 1, 2, 5 };
+        public static int[] ChairSellPrice = { 0, 1, 2 };
+
+        public static int[] TableBuyPrice = { 5, 11, 20 };
+        public static int[] TableSellPrice = { 2, 4, 9 };
+
+        public static int[] MainHallSellPrice = { 0, 1000, 11000 };
+        public static int[] MainHallUpgradePrice = { 0, 2000, 18000 };
+
         public static List<Human> Population = new List<Human>();
         public static List<Tavern_master> Masters= new List<Tavern_master>();
         public static bool is_there_tavern = false;
@@ -28,6 +37,9 @@ namespace TavernMasterr
         public static string file_of_names = @"\" + "names.dat";
         public static string file_of_population = @"\" + cur_player_name + "pulation.dat";
         public static string file_of_counter = @"\" + cur_player_name + "counter.dat";
+
+        
+
 
         public static void Appdate_data()
         {

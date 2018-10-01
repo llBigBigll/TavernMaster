@@ -1,4 +1,4 @@
-﻿namespace TavernMasterr
+﻿namespace TavernMaster
 {
     partial class MyMsgBox
     {
