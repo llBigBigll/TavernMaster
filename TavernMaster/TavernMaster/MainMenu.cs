@@ -25,7 +25,7 @@ namespace TavernMaster
         {
             InitializeComponent();
             Creating_tavern_master creating = new Creating_tavern_master(is_new_game);
-            creating.ShowDialog();
+            creating.Show();
 
         }
 
@@ -36,35 +36,50 @@ namespace TavernMaster
 
         private void btnCreatePeople_Click(object sender, EventArgs e)
         {
-            fCreateNewOne createWindow = new fCreateNewOne();
-            createWindow.ShowDialog();
+            this.Hide();
+            fCreateNewOne createppl = new fCreateNewOne();
+            createppl.Show();
+            createppl.FormClosing += ShowWhenChildClosed;
         }
 
         private void btnShowPop_Click(object sender, EventArgs e)
         {
-            ShowingPopulation createWindow = new ShowingPopulation();
-            createWindow.ShowDialog();
+            ShowingPopulation showpop = new ShowingPopulation();
+            this.Hide();
+            showpop.Show();
+            showpop.FormClosing += ShowWhenChildClosed;
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-            TheGame game = new TheGame();
-            game.ShowDialog();
             
-
+            TheGame game = new TheGame();
+            game.Show();
+            this.Hide();
+            game.FormClosing += ShowWhenChildClosed;
         }
+
+        private void ShowWhenChildClosed(object sender, FormClosingEventArgs e)
+        {
+            this.Show();
+        }
+
+
 
         private void button3_Click(object sender, EventArgs e)
         {
             ShowRules rules = new ShowRules();
-            
-            rules.ShowDialog();
+            this.Hide();
+            rules.Show();
+            rules.FormClosing += ShowWhenChildClosed;
         }
 
         private void BtnChangeMaster_Click(object sender, EventArgs e)
         {
+            this.Hide();
             ChangeAcc acc = new ChangeAcc();
             acc.Show();
+            acc.FormClosing += ShowWhenChildClosed;
         }
     }
 }
