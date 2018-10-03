@@ -57,7 +57,11 @@ namespace TavernMaster
             file_of_population = @"\" + cur_player_name + "pulation.dat";
             file_of_counter = @"\" + cur_player_name + "counter.dat";
         }
-
+        public static void SaveGame()
+        {
+            Tuple<Tavern_master, List<Tavern_master>> tuple = new Tuple<Tavern_master, List<Tavern_master>>(cur_master,Masters);
+            Program.Write_masters(tuple, file_players_list);
+        }
 
     }
 }

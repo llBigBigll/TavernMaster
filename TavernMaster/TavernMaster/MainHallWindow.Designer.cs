@@ -39,6 +39,8 @@
             this.labelMaxChairs = new System.Windows.Forms.Label();
             this.MaxTable = new System.Windows.Forms.Label();
             this.MaxChairs = new System.Windows.Forms.Label();
+            this.labelGold = new System.Windows.Forms.Label();
+            this.GoldBar = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.numTables)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numChairs)).BeginInit();
             this.SuspendLayout();
@@ -110,6 +112,7 @@
             this.button1.TabIndex = 5;
             this.button1.Text = "Купить/Продать";
             this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // txtSumm
             // 
@@ -171,12 +174,38 @@
             this.MaxChairs.TabIndex = 10;
             this.MaxChairs.Text = "label4";
             // 
+            // labelGold
+            // 
+            this.labelGold.AutoSize = true;
+            this.labelGold.BackColor = System.Drawing.Color.Transparent;
+            this.labelGold.Font = new System.Drawing.Font("Monotype Corsiva", 24F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.labelGold.ForeColor = System.Drawing.Color.Yellow;
+            this.labelGold.Location = new System.Drawing.Point(390, 72);
+            this.labelGold.Name = "labelGold";
+            this.labelGold.Size = new System.Drawing.Size(115, 39);
+            this.labelGold.TabIndex = 11;
+            this.labelGold.Text = "Золото:";
+            // 
+            // GoldBar
+            // 
+            this.GoldBar.AutoSize = true;
+            this.GoldBar.BackColor = System.Drawing.Color.Transparent;
+            this.GoldBar.Font = new System.Drawing.Font("Monotype Corsiva", 24F, System.Drawing.FontStyle.Italic);
+            this.GoldBar.ForeColor = System.Drawing.Color.Yellow;
+            this.GoldBar.Location = new System.Drawing.Point(499, 72);
+            this.GoldBar.Name = "GoldBar";
+            this.GoldBar.Size = new System.Drawing.Size(78, 39);
+            this.GoldBar.TabIndex = 12;
+            this.GoldBar.Text = "None";
+            // 
             // MainHallWindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::TavernMaster.Properties.Resources.imeg;
             this.ClientSize = new System.Drawing.Size(1004, 570);
+            this.Controls.Add(this.GoldBar);
+            this.Controls.Add(this.labelGold);
             this.Controls.Add(this.MaxChairs);
             this.Controls.Add(this.MaxTable);
             this.Controls.Add(this.labelMaxChairs);
@@ -192,6 +221,8 @@
             this.MinimumSize = new System.Drawing.Size(1020, 609);
             this.Name = "MainHallWindow";
             this.Text = "Главный зал";
+            this.Activated += new System.EventHandler(this.UpdateGoldBar);
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.MainHallWindow_FormClosing);
             ((System.ComponentModel.ISupportInitialize)(this.numTables)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numChairs)).EndInit();
             this.ResumeLayout(false);
@@ -212,5 +243,7 @@
         private System.Windows.Forms.Label labelMaxChairs;
         private System.Windows.Forms.Label MaxTable;
         private System.Windows.Forms.Label MaxChairs;
+        private System.Windows.Forms.Label labelGold;
+        private System.Windows.Forms.Label GoldBar;
     }
 }

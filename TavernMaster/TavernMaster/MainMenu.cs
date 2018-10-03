@@ -31,6 +31,7 @@ namespace TavernMaster
 
         private void button1_Click(object sender, EventArgs e)
         {
+            Global.SaveGame();
             this.Close();
         }
 
@@ -80,6 +81,18 @@ namespace TavernMaster
             ChangeAcc acc = new ChangeAcc();
             acc.Show();
             acc.FormClosing += ShowWhenChildClosed;
+        }
+
+        private void MainWindow_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            if (DialogResult.No == MessageBox.Show("Вы точно хотите выйти?", "Сообщение", MessageBoxButtons.YesNo, MessageBoxIcon.Question))
+            {
+                e.Cancel = true;
+            }
+            else
+            {
+                Global.SaveGame();
+            }
         }
     }
 }

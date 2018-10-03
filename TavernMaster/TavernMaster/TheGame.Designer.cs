@@ -39,6 +39,11 @@
             this.listboxMercenaries = new System.Windows.Forms.ListBox();
             this.btnGiveOrder = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
+            this.btnAlchemy = new System.Windows.Forms.Button();
+            this.btnProfile = new System.Windows.Forms.Button();
+            this.btnBlacksmith = new System.Windows.Forms.Button();
+            this.txtGold = new System.Windows.Forms.Label();
+            this.GoldBar = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // btnMainHall
@@ -57,11 +62,11 @@
             // 
             this.txtNameOfTavern.AutoSize = true;
             this.txtNameOfTavern.BackColor = System.Drawing.Color.Transparent;
-            this.txtNameOfTavern.Font = new System.Drawing.Font("Monotype Corsiva", 20.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Italic | System.Drawing.FontStyle.Underline))));
+            this.txtNameOfTavern.Font = new System.Drawing.Font("Monotype Corsiva", 36F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Italic | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.txtNameOfTavern.ForeColor = System.Drawing.Color.LightGreen;
-            this.txtNameOfTavern.Location = new System.Drawing.Point(419, 34);
+            this.txtNameOfTavern.Location = new System.Drawing.Point(12, 9);
             this.txtNameOfTavern.Name = "txtNameOfTavern";
-            this.txtNameOfTavern.Size = new System.Drawing.Size(70, 33);
+            this.txtNameOfTavern.Size = new System.Drawing.Size(126, 57);
             this.txtNameOfTavern.TabIndex = 1;
             this.txtNameOfTavern.Text = "label1";
             // 
@@ -123,7 +128,7 @@
             // btnToMainMenu
             // 
             this.btnToMainMenu.Font = new System.Drawing.Font("Monotype Corsiva", 14.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.btnToMainMenu.Location = new System.Drawing.Point(425, 482);
+            this.btnToMainMenu.Location = new System.Drawing.Point(809, 482);
             this.btnToMainMenu.Margin = new System.Windows.Forms.Padding(10, 20, 10, 20);
             this.btnToMainMenu.Name = "btnToMainMenu";
             this.btnToMainMenu.Size = new System.Drawing.Size(176, 59);
@@ -162,12 +167,80 @@
             this.button2.Text = "Инфо...";
             this.button2.UseVisualStyleBackColor = true;
             // 
+            // btnAlchemy
+            // 
+            this.btnAlchemy.Font = new System.Drawing.Font("Monotype Corsiva", 14.25F, System.Drawing.FontStyle.Italic);
+            this.btnAlchemy.Location = new System.Drawing.Point(509, 298);
+            this.btnAlchemy.Margin = new System.Windows.Forms.Padding(10, 20, 10, 20);
+            this.btnAlchemy.MaximumSize = new System.Drawing.Size(176, 59);
+            this.btnAlchemy.MinimumSize = new System.Drawing.Size(176, 59);
+            this.btnAlchemy.Name = "btnAlchemy";
+            this.btnAlchemy.Size = new System.Drawing.Size(176, 59);
+            this.btnAlchemy.TabIndex = 11;
+            this.btnAlchemy.Text = "Алхимия";
+            this.btnAlchemy.UseVisualStyleBackColor = true;
+            // 
+            // btnProfile
+            // 
+            this.btnProfile.Font = new System.Drawing.Font("Monotype Corsiva", 14.25F, System.Drawing.FontStyle.Italic);
+            this.btnProfile.Location = new System.Drawing.Point(809, 9);
+            this.btnProfile.Margin = new System.Windows.Forms.Padding(10, 20, 10, 20);
+            this.btnProfile.MaximumSize = new System.Drawing.Size(176, 59);
+            this.btnProfile.MinimumSize = new System.Drawing.Size(176, 59);
+            this.btnProfile.Name = "btnProfile";
+            this.btnProfile.Size = new System.Drawing.Size(176, 59);
+            this.btnProfile.TabIndex = 12;
+            this.btnProfile.Text = "Мой Профиль";
+            this.btnProfile.UseVisualStyleBackColor = true;
+            // 
+            // btnBlacksmith
+            // 
+            this.btnBlacksmith.Font = new System.Drawing.Font("Monotype Corsiva", 14.25F, System.Drawing.FontStyle.Italic);
+            this.btnBlacksmith.Location = new System.Drawing.Point(509, 100);
+            this.btnBlacksmith.Margin = new System.Windows.Forms.Padding(10, 20, 10, 20);
+            this.btnBlacksmith.MaximumSize = new System.Drawing.Size(176, 59);
+            this.btnBlacksmith.MinimumSize = new System.Drawing.Size(176, 59);
+            this.btnBlacksmith.Name = "btnBlacksmith";
+            this.btnBlacksmith.Size = new System.Drawing.Size(176, 59);
+            this.btnBlacksmith.TabIndex = 13;
+            this.btnBlacksmith.Text = "Кузнечное дело";
+            this.btnBlacksmith.UseVisualStyleBackColor = true;
+            // 
+            // txtGold
+            // 
+            this.txtGold.AutoSize = true;
+            this.txtGold.BackColor = System.Drawing.Color.Transparent;
+            this.txtGold.Font = new System.Drawing.Font("Monotype Corsiva", 36F, System.Drawing.FontStyle.Italic);
+            this.txtGold.ForeColor = System.Drawing.Color.Yellow;
+            this.txtGold.Location = new System.Drawing.Point(445, 11);
+            this.txtGold.Name = "txtGold";
+            this.txtGold.Size = new System.Drawing.Size(169, 57);
+            this.txtGold.TabIndex = 14;
+            this.txtGold.Text = "Золото:";
+            // 
+            // GoldBar
+            // 
+            this.GoldBar.AutoSize = true;
+            this.GoldBar.BackColor = System.Drawing.Color.Transparent;
+            this.GoldBar.Font = new System.Drawing.Font("Monotype Corsiva", 36F, System.Drawing.FontStyle.Italic);
+            this.GoldBar.ForeColor = System.Drawing.Color.Yellow;
+            this.GoldBar.Location = new System.Drawing.Point(600, 9);
+            this.GoldBar.Name = "GoldBar";
+            this.GoldBar.Size = new System.Drawing.Size(46, 57);
+            this.GoldBar.TabIndex = 15;
+            this.GoldBar.Text = "0";
+            // 
             // TheGame
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::TavernMaster.Properties.Resources.imeg;
             this.ClientSize = new System.Drawing.Size(1004, 570);
+            this.Controls.Add(this.GoldBar);
+            this.Controls.Add(this.txtGold);
+            this.Controls.Add(this.btnBlacksmith);
+            this.Controls.Add(this.btnProfile);
+            this.Controls.Add(this.btnAlchemy);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.btnGiveOrder);
             this.Controls.Add(this.listboxMercenaries);
@@ -183,6 +256,7 @@
             this.MinimumSize = new System.Drawing.Size(1020, 609);
             this.Name = "TheGame";
             this.Text = "TheGame";
+            this.Load += new System.EventHandler(this.UpdateForm);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -201,5 +275,10 @@
         private System.Windows.Forms.ListBox listboxMercenaries;
         private System.Windows.Forms.Button btnGiveOrder;
         private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btnAlchemy;
+        private System.Windows.Forms.Button btnProfile;
+        private System.Windows.Forms.Button btnBlacksmith;
+        private System.Windows.Forms.Label txtGold;
+        private System.Windows.Forms.Label GoldBar;
     }
 }

@@ -85,5 +85,11 @@ namespace TavernMaster
             Global.Appdate_cur_master(Global.Masters[this.listBox.SelectedIndex]);
             MessageBox.Show("Профиль изменен на " + Global.cur_player_name, "Сообщение", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
+
+        private void ChangeAcc_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Global.SaveGame();
+
+        }
     }
 }

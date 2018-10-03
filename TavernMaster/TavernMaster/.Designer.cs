@@ -118,6 +118,7 @@
             this.MinimumSize = new System.Drawing.Size(412, 524);
             this.Name = "ChangeAcc";
             this.Text = "ChangeAcc";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.ChangeAcc_FormClosing);
             this.ResumeLayout(false);
 
         }

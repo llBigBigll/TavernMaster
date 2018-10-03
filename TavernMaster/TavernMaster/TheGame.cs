@@ -29,6 +29,14 @@ namespace TavernMaster
         {
             MainHallWindow mainhall= new MainHallWindow();
             mainhall.ShowDialog();
+            
+        }
+
+        private void UpdateForm(object sender, EventArgs e)
+        {
+            this.GoldBar.Text = Convert.ToString(Global.cur_master.Get_Fund());
+            this.GoldBar.Location = new Point(this.btnProfile.Location.X - 46*(this.GoldBar.Text.Length) ,this.btnProfile.Location.Y);
+            this.txtGold.Location = new Point(this.GoldBar.Location.X -155, this.btnProfile.Location.Y);
         }
     }
 }

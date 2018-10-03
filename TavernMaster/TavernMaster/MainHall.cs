@@ -112,7 +112,7 @@ namespace TavernMaster
 
         public void AddChairs(int num)
         {
-            this.NumTable += num;
+            this.NumChair += num;
         }
 
         public int FreeChairsCount()
