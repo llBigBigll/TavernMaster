@@ -40,6 +40,7 @@
             // 
             this.txtTavern.Font = new System.Drawing.Font("Monotype Corsiva", 12F, System.Drawing.FontStyle.Italic);
             this.txtTavern.Location = new System.Drawing.Point(437, 75);
+            this.txtTavern.MaxLength = 18;
             this.txtTavern.Name = "txtTavern";
             this.txtTavern.Size = new System.Drawing.Size(146, 25);
             this.txtTavern.TabIndex = 2;

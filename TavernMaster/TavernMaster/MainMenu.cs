@@ -31,7 +31,7 @@ namespace TavernMaster
 
         private void button1_Click(object sender, EventArgs e)
         {
-            Global.SaveGame();
+            //Global.SaveGame();
             this.Close();
         }
 

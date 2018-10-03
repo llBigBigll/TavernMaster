@@ -9,6 +9,7 @@ namespace TavernMaster
     [Serializable]
     public class Tavern
     {
+        public List<Room> Rooms = new List<Room>();
         public MainHall Mainhall;
         string Name;
         Size TheSize;
@@ -29,6 +30,10 @@ namespace TavernMaster
         }
         public Tavern()
         {
+            for (int i = 0; i < 3; i++)
+            {
+                Rooms.Add(new Room());
+            }
             Name = null;
             TheSize = Size.Small;
             Mainhall = new MainHall(TheSize, 1);

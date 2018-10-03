@@ -64,11 +64,11 @@
             this.txtNameOfTavern.BackColor = System.Drawing.Color.Transparent;
             this.txtNameOfTavern.Font = new System.Drawing.Font("Monotype Corsiva", 36F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Italic | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.txtNameOfTavern.ForeColor = System.Drawing.Color.LightGreen;
-            this.txtNameOfTavern.Location = new System.Drawing.Point(12, 9);
+            this.txtNameOfTavern.Location = new System.Drawing.Point(12, 11);
             this.txtNameOfTavern.Name = "txtNameOfTavern";
-            this.txtNameOfTavern.Size = new System.Drawing.Size(126, 57);
+            this.txtNameOfTavern.Size = new System.Drawing.Size(445, 57);
             this.txtNameOfTavern.TabIndex = 1;
-            this.txtNameOfTavern.Text = "label1";
+            this.txtNameOfTavern.Text = "00000000000000000001";
             // 
             // btnSecondFloor
             // 
@@ -170,7 +170,7 @@
             // btnAlchemy
             // 
             this.btnAlchemy.Font = new System.Drawing.Font("Monotype Corsiva", 14.25F, System.Drawing.FontStyle.Italic);
-            this.btnAlchemy.Location = new System.Drawing.Point(509, 298);
+            this.btnAlchemy.Location = new System.Drawing.Point(509, 199);
             this.btnAlchemy.Margin = new System.Windows.Forms.Padding(10, 20, 10, 20);
             this.btnAlchemy.MaximumSize = new System.Drawing.Size(176, 59);
             this.btnAlchemy.MinimumSize = new System.Drawing.Size(176, 59);
