@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace TavernMaster
 {
@@ -53,18 +54,25 @@ namespace TavernMaster
             this.IsTaken = true;
             this.GuestName = renter;
         }
-        public bool Upgrade()
+        public void Upgrade()
         {
             if (this.Grade < 3)
             {
+                if (Global.cur_master.WithDrawMoney(Global.RoomsUpgradeCost[this.Grade]))
+                {
+                    this.Grade += 1;
+                    Income = Convert.ToInt32(IsTaken) * Rental - Global.RoomsUpkeep[this.Grade - 1] * Convert.ToInt32(IsActive);
+                    
+                }
+                else
+                {
+                    MessageBox.Show("Не достаточно средств", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
                 
-                this.Grade += 1;
-                Income = Convert.ToInt32(IsTaken) * Rental - Global.RoomsUpkeep[this.Grade - 1] * Convert.ToInt32(IsActive);
-                return true;
             }
             else
             {
-                return false;
+                MessageBox.Show("Комната- максимального уровня", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
             
         }
@@ -74,7 +82,14 @@ namespace TavernMaster
         }
         public int GetIncome()
         {
-            return this.Income;
+            if (this.IsActive)
+            {
+                return this.Income;
+            }
+            else
+            {
+                return 0;
+            }
         }
         public int GetTimeOfRent()
         {
@@ -87,6 +102,21 @@ namespace TavernMaster
         public void SetRental(int rental)
         {
             this.Rental = rental;
+        }
+        public void ChangeStatus()
+        {
+            if (this.IsActive)
+            {
+                this.IsActive = false;
+            }
+            else
+            {
+                this.IsActive = true;
+            }
+        }
+        public bool GetStatus()
+        {
+            return this.IsActive;
         }
 
         

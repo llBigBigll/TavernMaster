@@ -157,19 +157,31 @@ namespace TavernMaster
                 
                 if (Is_new_game)
                 {
-                    Global.Appdate_cur_master(master);
-                    Global.AddMaster(master);
-                    MessageBox.Show("Поздравляю создан новый игровой профиль", "Оповещение", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    Tuple<Tavern_master, List<Tavern_master>> tuple = new Tuple<Tavern_master, List<Tavern_master>>(master, Global.Masters);
-                    Program.Write_masters(tuple, Global.file_players_list);
-                    this.Close();
+                    if (!Global.Masters.Contains(new Tavern_master(name)))
+                    {
+                        Global.Appdate_cur_master(master);
+                        Global.AddMaster(master);
+                        MessageBox.Show("Поздравляю создан новый игровой профиль", "Оповещение", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        Tuple<Tavern_master, List<Tavern_master>> tuple = new Tuple<Tavern_master, List<Tavern_master>>(master, Global.Masters);
+                        Program.Write_masters(tuple, Global.file_players_list);
+                        this.Close();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Профиль с таким именем существует","Ошибка",MessageBoxButtons.OK,MessageBoxIcon.Warning);
+                    }
                 }
                 else {
-                    Global.AddMaster(master);
-                    MessageBox.Show("Поздравляю создан новый игровой профиль", "Оповещение", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    Tuple<Tavern_master, List<Tavern_master>> tuple = new Tuple<Tavern_master, List<Tavern_master>>(master, Global.Masters);
-                    Program.Write_masters(tuple, Global.file_players_list);
-                    this.Close();
+                    if (!Global.Masters.Contains(new Tavern_master(name))){
+                        Global.AddMaster(master);
+                        MessageBox.Show("Поздравляю создан новый игровой профиль", "Оповещение", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        Tuple<Tavern_master, List<Tavern_master>> tuple = new Tuple<Tavern_master, List<Tavern_master>>(master, Global.Masters);
+                        Program.Write_masters(tuple, Global.file_players_list);
+                        this.Close(); }
+                    else
+                    {
+                        MessageBox.Show("Профиль с таким именем существует", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    }
                 }
             }
 

@@ -20,7 +20,7 @@ namespace TavernMaster
             "Инцест запрещен\n" +
             "...." +
             "";
-
+        public static int[] RoomsUpgradeCost = {0,20,65 };
         public static int[] RoomsUpkeep = {0,4,8};
 
         public static int[] ChairBuyPrice = { 1, 2, 5 };

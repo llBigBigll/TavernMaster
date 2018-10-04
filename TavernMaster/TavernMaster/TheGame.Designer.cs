@@ -80,6 +80,7 @@
             this.btnSecondFloor.TabIndex = 1;
             this.btnSecondFloor.Text = "Второй Этаж";
             this.btnSecondFloor.UseVisualStyleBackColor = true;
+            this.btnSecondFloor.Click += new System.EventHandler(this.btnSecondFloor_Click);
             // 
             // btnCourtyard
             // 
@@ -256,6 +257,7 @@
             this.MinimumSize = new System.Drawing.Size(1020, 609);
             this.Name = "TheGame";
             this.Text = "TheGame";
+            this.Activated += new System.EventHandler(this.UpdateForm);
             this.Load += new System.EventHandler(this.UpdateForm);
             this.ResumeLayout(false);
             this.PerformLayout();

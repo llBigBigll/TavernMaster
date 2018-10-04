@@ -38,5 +38,12 @@ namespace TavernMaster
             this.GoldBar.Location = new Point(this.btnProfile.Location.X - 46*(this.GoldBar.Text.Length) ,this.btnProfile.Location.Y);
             this.txtGold.Location = new Point(this.GoldBar.Location.X -155, this.btnProfile.Location.Y);
         }
+
+        private void btnSecondFloor_Click(object sender, EventArgs e)
+        {
+            SecondFloor secondfloor = new SecondFloor();
+            secondfloor.ShowDialog();
+            
+        }
     }
 }

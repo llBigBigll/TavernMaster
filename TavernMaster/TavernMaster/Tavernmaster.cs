@@ -42,7 +42,10 @@ namespace TavernMaster
             this.TheTavern = new Tavern();
             this.Cur_exp = 0;
         }
-
+        public Tavern_master(string name)
+        {
+            this.Name = name;
+        }
         
 
         private void Appdate_lvl()
@@ -137,7 +140,7 @@ namespace TavernMaster
             }
         }
 
-        bool IsEqual(Tavern_master human) { return Int32.Equals(Name, human.Name); }
+        bool IsEqual(Tavern_master human) { return String.Equals(Name, human.Name); }
         public override bool Equals(object obj)
         {
             if (Object.ReferenceEquals(null, obj)) { return false; }
