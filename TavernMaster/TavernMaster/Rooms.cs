@@ -107,10 +107,11 @@ namespace TavernMaster
         {
             if (this.IsActive)
             {
+                
                 this.IsActive = false;
             }
             else
-            {
+            {   
                 this.IsActive = true;
             }
         }

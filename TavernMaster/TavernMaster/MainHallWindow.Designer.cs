@@ -41,6 +41,11 @@
             this.MaxChairs = new System.Windows.Forms.Label();
             this.labelGold = new System.Windows.Forms.Label();
             this.GoldBar = new System.Windows.Forms.Label();
+            this.txtInvo = new System.Windows.Forms.Label();
+            this.btnUpgrade = new System.Windows.Forms.Button();
+            this.UpgraddeSummBar = new System.Windows.Forms.Label();
+            this.GradeBar = new System.Windows.Forms.Label();
+            this.button2 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.numTables)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numChairs)).BeginInit();
             this.SuspendLayout();
@@ -198,12 +203,81 @@
             this.GoldBar.TabIndex = 12;
             this.GoldBar.Text = "None";
             // 
+            // txtInvo
+            // 
+            this.txtInvo.AutoSize = true;
+            this.txtInvo.BackColor = System.Drawing.Color.Transparent;
+            this.txtInvo.Font = new System.Drawing.Font("Monotype Corsiva", 15.75F, System.Drawing.FontStyle.Italic);
+            this.txtInvo.ForeColor = System.Drawing.Color.DarkTurquoise;
+            this.txtInvo.Location = new System.Drawing.Point(12, 483);
+            this.txtInvo.Name = "txtInvo";
+            this.txtInvo.Size = new System.Drawing.Size(56, 25);
+            this.txtInvo.TabIndex = 13;
+            this.txtInvo.Text = "label2";
+            // 
+            // btnUpgrade
+            // 
+            this.btnUpgrade.BackColor = System.Drawing.Color.Transparent;
+            this.btnUpgrade.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnUpgrade.Font = new System.Drawing.Font("Monotype Corsiva", 15.75F, System.Drawing.FontStyle.Italic);
+            this.btnUpgrade.ForeColor = System.Drawing.Color.Yellow;
+            this.btnUpgrade.Location = new System.Drawing.Point(199, 378);
+            this.btnUpgrade.Name = "btnUpgrade";
+            this.btnUpgrade.Size = new System.Drawing.Size(150, 69);
+            this.btnUpgrade.TabIndex = 14;
+            this.btnUpgrade.Text = "Улутшить";
+            this.btnUpgrade.UseVisualStyleBackColor = false;
+            this.btnUpgrade.Click += new System.EventHandler(this.btnUpgrade_Click);
+            // 
+            // UpgraddeSummBar
+            // 
+            this.UpgraddeSummBar.AutoSize = true;
+            this.UpgraddeSummBar.BackColor = System.Drawing.Color.Transparent;
+            this.UpgraddeSummBar.Font = new System.Drawing.Font("Monotype Corsiva", 15.75F, System.Drawing.FontStyle.Italic);
+            this.UpgraddeSummBar.ForeColor = System.Drawing.Color.Goldenrod;
+            this.UpgraddeSummBar.Location = new System.Drawing.Point(194, 350);
+            this.UpgraddeSummBar.Name = "UpgraddeSummBar";
+            this.UpgraddeSummBar.Size = new System.Drawing.Size(56, 25);
+            this.UpgraddeSummBar.TabIndex = 15;
+            this.UpgraddeSummBar.Text = "label2";
+            // 
+            // GradeBar
+            // 
+            this.GradeBar.AutoSize = true;
+            this.GradeBar.BackColor = System.Drawing.Color.Transparent;
+            this.GradeBar.Font = new System.Drawing.Font("Monotype Corsiva", 20.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.GradeBar.ForeColor = System.Drawing.Color.Purple;
+            this.GradeBar.Location = new System.Drawing.Point(368, 394);
+            this.GradeBar.Name = "GradeBar";
+            this.GradeBar.Size = new System.Drawing.Size(70, 33);
+            this.GradeBar.TabIndex = 16;
+            this.GradeBar.Text = "label2";
+            // 
+            // button2
+            // 
+            this.button2.BackColor = System.Drawing.Color.Transparent;
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.Font = new System.Drawing.Font("Monotype Corsiva", 15.75F, System.Drawing.FontStyle.Italic);
+            this.button2.ForeColor = System.Drawing.Color.Yellow;
+            this.button2.Location = new System.Drawing.Point(842, 489);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(150, 69);
+            this.button2.TabIndex = 17;
+            this.button2.Text = "Назад";
+            this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
             // MainHallWindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::TavernMaster.Properties.Resources.imeg;
             this.ClientSize = new System.Drawing.Size(1004, 570);
+            this.Controls.Add(this.button2);
+            this.Controls.Add(this.GradeBar);
+            this.Controls.Add(this.UpgraddeSummBar);
+            this.Controls.Add(this.btnUpgrade);
+            this.Controls.Add(this.txtInvo);
             this.Controls.Add(this.GoldBar);
             this.Controls.Add(this.labelGold);
             this.Controls.Add(this.MaxChairs);
@@ -245,5 +319,10 @@
         private System.Windows.Forms.Label MaxChairs;
         private System.Windows.Forms.Label labelGold;
         private System.Windows.Forms.Label GoldBar;
+        private System.Windows.Forms.Label txtInvo;
+        private System.Windows.Forms.Button btnUpgrade;
+        private System.Windows.Forms.Label UpgraddeSummBar;
+        private System.Windows.Forms.Label GradeBar;
+        private System.Windows.Forms.Button button2;
     }
 }

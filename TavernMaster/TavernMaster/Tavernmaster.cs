@@ -36,7 +36,7 @@ namespace TavernMaster
 
         public Tavern_master()
         {
-            this.Fund = 21;
+            this.Fund = 56;
             this.Level = 0;
             this.Name = null;
             this.TheTavern = new Tavern();

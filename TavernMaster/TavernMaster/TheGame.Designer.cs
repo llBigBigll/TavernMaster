@@ -44,6 +44,7 @@
             this.btnBlacksmith = new System.Windows.Forms.Button();
             this.txtGold = new System.Windows.Forms.Label();
             this.GoldBar = new System.Windows.Forms.Label();
+            this.EndDay = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnMainHall
@@ -231,12 +232,25 @@
             this.GoldBar.TabIndex = 15;
             this.GoldBar.Text = "0";
             // 
+            // EndDay
+            // 
+            this.EndDay.Font = new System.Drawing.Font("Monotype Corsiva", 14.25F, System.Drawing.FontStyle.Italic);
+            this.EndDay.Location = new System.Drawing.Point(382, 482);
+            this.EndDay.Margin = new System.Windows.Forms.Padding(10, 20, 10, 20);
+            this.EndDay.Name = "EndDay";
+            this.EndDay.Size = new System.Drawing.Size(176, 59);
+            this.EndDay.TabIndex = 16;
+            this.EndDay.Text = "Закончить День";
+            this.EndDay.UseVisualStyleBackColor = true;
+            this.EndDay.Click += new System.EventHandler(this.EndDay_Click);
+            // 
             // TheGame
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::TavernMaster.Properties.Resources.imeg;
             this.ClientSize = new System.Drawing.Size(1004, 570);
+            this.Controls.Add(this.EndDay);
             this.Controls.Add(this.GoldBar);
             this.Controls.Add(this.txtGold);
             this.Controls.Add(this.btnBlacksmith);
@@ -282,5 +296,6 @@
         private System.Windows.Forms.Button btnBlacksmith;
         private System.Windows.Forms.Label txtGold;
         private System.Windows.Forms.Label GoldBar;
+        private System.Windows.Forms.Button EndDay;
     }
 }

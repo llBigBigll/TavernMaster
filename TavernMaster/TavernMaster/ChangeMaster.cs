@@ -15,6 +15,8 @@ namespace TavernMaster
         public ChangeAcc()
         {
             InitializeComponent();
+            
+            
             List<string> mastersnames = new List<string>();
             foreach (Tavern_master el in Global.Masters)
             {

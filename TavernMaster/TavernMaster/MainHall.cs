@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace TavernMaster
 {
@@ -105,20 +106,35 @@ namespace TavernMaster
 
         }
 
-        public void AddTables(int num)
-        {   
-            this.NumTable += num;
+        public void Upgrade()
+        {
+            if (this.Grade < 3)
+            {
+                this.Grade += 1;
+                this.NumChair = 0;
+                this.NumTable = 0;
+            }
+            else
+            {
+                MessageBox.Show("Главный зал уже максимального уровня!","Ошибка",MessageBoxButtons.OK,MessageBoxIcon.Warning);
+            }
         }
 
-        public void AddChairs(int num)
+        public void SetTables(int num)
+        {   
+            this.NumTable = num;
+        }
+
+        public void SetChairs(int num)
         {
-            this.NumChair += num;
+            this.NumChair = num;
         }
 
         public int FreeChairsCount()
         {
             return this.NumChair - (this.NumTable * 4);
         }
+
 
     }
 }

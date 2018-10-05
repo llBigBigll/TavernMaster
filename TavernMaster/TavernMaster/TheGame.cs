@@ -45,5 +45,10 @@ namespace TavernMaster
             secondfloor.ShowDialog();
             
         }
+
+        private void EndDay_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
