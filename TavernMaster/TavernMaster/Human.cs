@@ -9,10 +9,10 @@ using System.Threading.Tasks;
 namespace TavernMaster
 {
 
-    //7 элементов
-                                                                    //enum Attractiveness { Ugly, Almost_Ugly, NotVeryAttractive, Attractive, Alpha }//5 элементов
-                                                                    //enum Intelligence { Retarded, Stupid, NotStupid, MiddleMinded, Smart, Genius }//6 элементов
-                                                                    //enum Charisma { Parubij, PickUpMaster, Mercury, Jesus }//4 элемента
+  
+//enum Attractiveness { Ugly, Almost_Ugly, NotVeryAttractive, Attractive, Alpha }//5 элементов
+//enum Intelligence { Retarded, Stupid, NotStupid, MiddleMinded, Smart, Genius }//6 элементов
+//enum Charisma { Parubij, PickUpMaster, Mercury, Jesus }//4 элемента
 
     [Serializable]
     public class Human

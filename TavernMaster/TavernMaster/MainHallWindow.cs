@@ -15,6 +15,7 @@ namespace TavernMaster
     {
         static int UpgradeCost = 0;
         static int updateCost;
+        
         public MainHallWindow()
         {
             InitializeComponent();
@@ -22,6 +23,7 @@ namespace TavernMaster
             this.txtSumm.Hide();
 
         }
+
         private void UpdateWindow()
         {
             this.txtInvo.Text = "Стоимость улутшения до уровня 2- " + Global.MainHallUpgradePrice[1] + ". Для уровня 3 соответственно- " +

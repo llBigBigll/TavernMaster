@@ -25,13 +25,13 @@ namespace TavernMaster
         {
             InitializeComponent();
             Creating_tavern_master creating = new Creating_tavern_master(is_new_game);
-            creating.Show();
+            creating.ShowDialog();
 
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            //Global.SaveGame();
+            Global.SaveGame();
             this.Close();
         }
 

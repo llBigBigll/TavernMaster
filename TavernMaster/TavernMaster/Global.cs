@@ -12,6 +12,7 @@ namespace TavernMaster
     public enum MasterCraft { Blacksmith, Alchemy, Warior, Archer, Farm, Merchant, None }
     public enum Gender { Male, Female }
     public enum HairColor { Brown, Blond, Red, Black, Purple, Green, Pink }
+    public enum Skills {Trade, Farm, Alchemy, Blacksmith, Archery, SwordMastery }
     public static class Global
 
     {
@@ -66,7 +67,7 @@ namespace TavernMaster
             file_of_counter = @"\" + cur_player_name + "counter.dat";
         }
 
-        public static void SaveMaster()
+        private static void SaveMaster()
         {
             Masters[Masters.IndexOf(cur_master)] = cur_master;
         }

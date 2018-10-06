@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+
 namespace TavernMaster
 {
     
@@ -31,8 +32,17 @@ namespace TavernMaster
         int Level;
         string Name;
         public Tavern TheTavern;
-        MasterCraft craft;
-        double Cur_exp;
+        MasterCraft Craft;
+        int Cur_exp;
+        int SkillPts;
+
+        int Trade;//(0-10)
+        int Farm;//(0-10)
+        int Alchemy;//(0-10)
+        int Blacksmith;//(0-10)
+        int Archery;//(0-10)
+        int SwordMastery;//(0-10)
+
 
         public Tavern_master()
         {
@@ -41,39 +51,171 @@ namespace TavernMaster
             this.Name = null;
             this.TheTavern = new Tavern();
             this.Cur_exp = 0;
+            this.Trade = 0;
+            this.Farm = 0;
+            this.Alchemy = 0;
+            this.Blacksmith = 0;
+            this.Archery = 0;
+            this.SwordMastery = 0;
+            this.SkillPts = 0;
         }
+
         public Tavern_master(string name)
         {
             this.Name = name;
         }
         
-
         private void Appdate_lvl()
         {
-            double exp_needed = 1000*Math.Pow(1.2,this.Level-1);
+            int exp_needed = Convert.ToInt32(1000*Math.Pow(1.2,this.Level));
             while(this.Cur_exp >= exp_needed)
             {
                 this.Level += 1;
                 this.Cur_exp -= exp_needed;
-                exp_needed = 1000 * Math.Pow(1.2, this.Level - 1);
+                exp_needed = Convert.ToInt32(1000 * Math.Pow(1.2, this.Level));
             }
         }
 
+        public int GetExpForUp()
+        {
+            return Convert.ToInt32(1000 * Math.Pow(1.2, this.Level));
+        }
+
+        public int GetTradeLvl()
+        {
+            return this.Trade;
+        }
+        public int GetFarmLvl()
+        {
+            return this.Farm;
+        }
+        public int GetAlchemyLvl()
+        {
+            return this.Alchemy;
+        }
+        public int GetBlacksmithLvl()
+        {
+            return this.Blacksmith;
+        }
+        public int GetArcheryLvl()
+        {
+            return this.Archery;
+        }
+        public int GetSwordMasteryLvl()
+        {
+            return this.SwordMastery;
+        }
+
+        public void SetTradeLvl(int a)
+        {
+            this.Trade = a;
+        }
+        public void SetFarmLvl(int a)
+        {
+            this.Farm = a;
+        }
+        public void SetAlchemyLvl(int a)
+        {
+            this.Alchemy = a;
+        }
+        public void SetBlacksmithLvl(int a)
+        {
+            this.Blacksmith = a;
+        }
+        public void SetArcheryLvl(int a)
+        {
+            this.Archery = a;
+        }
+        public void SetSwordMasteryLvl(int a)
+        {
+            this.Trade = a;
+        }
+
+        public int GetExp()
+        {
+            return this.Cur_exp;
+        }
 
         public void Set_craft(MasterCraft masterCraft)
         {
-            this.craft = masterCraft;
+            if (masterCraft == MasterCraft.Blacksmith)
+            {
+                this.Blacksmith = 2;
+                this.SwordMastery = 1;
+                this.Archery = 1;
+                
+            }
+            else if (masterCraft == MasterCraft.Alchemy)
+            {
+                this.Alchemy = 3;
+                this.Farm = 1;
+            }
+            else if (masterCraft == MasterCraft.Warior)
+            {
+                this.SwordMastery = 2;
+                this.Archery = 1;
+                this.Blacksmith = 1;
+            }
+            else if (masterCraft == MasterCraft.Archer)
+            {
+                this.Archery = 2;
+                this.Alchemy = 1;
+                this.Blacksmith = 1;
+            }
+            else if (masterCraft == MasterCraft.Farm)
+            {
+                this.Farm = 4;
+            }
+            else if (masterCraft == MasterCraft.Merchant)
+            {
+                this.Trade = 2;
+                this.Farm = 2;
+            }
+            this.Craft = masterCraft;
+
         }
 
         public void Set_craft(string mastercraft)
         {
-            this.craft = MasterCraft.None;
-            if (mastercraft == "Blacksmith") { this.craft = MasterCraft.Blacksmith; }
-            if (mastercraft == "Alchemy") { this.craft = MasterCraft.Alchemy; }
-            if (mastercraft == "Warior") { this.craft = MasterCraft.Warior; }
-            if (mastercraft == "Archer") { this.craft = MasterCraft.Archer; }
-            if (mastercraft == "Farm") { this.craft = MasterCraft.Farm; }
-            if (mastercraft == "Merchant") { this.craft = MasterCraft.Merchant; }
+            this.Craft = MasterCraft.None;
+            if (mastercraft == "Blacksmith")
+            {
+                this.Blacksmith = 2;
+                this.SwordMastery = 1;
+                this.Archery = 1;
+                this.Craft = MasterCraft.Blacksmith;
+            }
+            else if (mastercraft == "Alchemy")
+            {
+                this.Alchemy = 3;
+                this.Farm = 1;
+                this.Craft = MasterCraft.Alchemy;
+            }
+            else if (mastercraft == "Warior")
+            {
+                this.SwordMastery = 2;
+                this.Archery = 1;
+                this.Blacksmith = 1;
+                this.Craft = MasterCraft.Warior;
+            }
+            else if (mastercraft == "Archer")
+            {
+                this.Archery = 2;
+                this.Alchemy = 1;
+                this.Blacksmith = 1;
+                this.Craft = MasterCraft.Archer;
+            }
+            else if (mastercraft == "Farm")
+            {
+                this.Farm = 4;
+                this.Craft = MasterCraft.Farm;
+            }
+            else if (mastercraft == "Merchant")
+            {
+                this.Trade = 2;
+                this.Farm = 2;
+                this.Craft = MasterCraft.Merchant;
+            }
             
         }
 
@@ -108,12 +250,16 @@ namespace TavernMaster
             Appdate_lvl();
         }
         
-
-
         public int Get_Fund()
         {
             return this.Fund;
         }
+
+        public int GetSkillsPts()
+        {
+            return this.SkillPts;
+        }
+
         public void Add_Cash( int summ)
         {
             this.Fund += summ;
@@ -137,6 +283,34 @@ namespace TavernMaster
             else
             {
                 return false;
+            }
+        }
+
+        public void SpendSkillPts(Skills skill, int count)
+        {
+            if (skill == Skills.Archery)
+            {
+                this.Archery += count;
+            }
+            if (skill == Skills.Blacksmith)
+            {
+                this.Blacksmith += count;
+            }
+            if (skill == Skills.Alchemy)
+            {
+                this.Alchemy += count;
+            }
+            if (skill == Skills.Farm)
+            {
+                this.Farm += count;
+            }
+            if (skill == Skills.SwordMastery)
+            {
+                this.SwordMastery += count;
+            }
+            if (skill == Skills.Trade)
+            {
+                this.Trade += count;
             }
         }
 

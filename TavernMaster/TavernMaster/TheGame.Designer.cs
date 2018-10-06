@@ -194,6 +194,7 @@
             this.btnProfile.TabIndex = 12;
             this.btnProfile.Text = "Мой Профиль";
             this.btnProfile.UseVisualStyleBackColor = true;
+            this.btnProfile.Click += new System.EventHandler(this.btnProfile_Click);
             // 
             // btnBlacksmith
             // 

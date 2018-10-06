@@ -50,5 +50,11 @@ namespace TavernMaster
         {
 
         }
+
+        private void btnProfile_Click(object sender, EventArgs e)
+        {
+            MyProfile profile = new MyProfile();
+            profile.ShowDialog();
+        }
     }
 }
